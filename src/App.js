@@ -1,5 +1,7 @@
+import { AppRouter } from "./pages/PagesIndex";
+
 function App() {
-  return;
+  return <AppRouter />;
 }
 
 export default App;
