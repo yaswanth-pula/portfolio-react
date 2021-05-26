@@ -1,7 +1,16 @@
-import React from "react";
-
+import {
+  AppAboutHeaderImage,
+  AppAboutHeaderText,
+} from "../molecules/moleculesIndex";
+import { AboutContent } from "../organisms/organismIndex";
 const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <AppAboutHeaderImage />
+      <AppAboutHeaderText />
+      <AboutContent />
+    </div>
+  );
 };
 
 export default About;

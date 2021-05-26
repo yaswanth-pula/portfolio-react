@@ -1,7 +1,7 @@
 import "./molecule.css";
-
+import { MainHeader } from "../atoms/atomIndex";
 const AppHomeTitleText = () => {
-  return <h1 className="main-title">I'm Yaswanth Sai</h1>;
+  return <MainHeader classes="main-title" text="I'm Yaswanth Sai" />;
 };
 
 export default AppHomeTitleText;

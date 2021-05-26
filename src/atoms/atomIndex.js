@@ -1,3 +1,4 @@
 import NavLink from "./NavLink";
-
-export { NavLink };
+import TextTitle from "./TextTitle";
+import MainHeader from "./MainHeader";
+export { NavLink, TextTitle, MainHeader };

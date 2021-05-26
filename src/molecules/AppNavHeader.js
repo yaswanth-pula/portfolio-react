@@ -1,5 +1,7 @@
+import { TextTitle } from "../atoms/atomIndex";
+
 const AppNavHeader = () => {
-  return <span className="brand-name">Yaswanth Sai</span>;
+  return <TextTitle classes="brand-name" text="Yaswanth Sai" />;
 };
 
 export default AppNavHeader;
