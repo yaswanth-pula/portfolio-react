@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core";
 import { NavLink } from "../atoms/atomIndex";
 
 const useStyles = makeStyles({
-  textStyle: {},
   link: {
     textDecoration: "none",
     color: "#333",

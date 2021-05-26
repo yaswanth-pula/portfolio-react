@@ -1,20 +1,7 @@
 import { AppNavLink } from "../molecules/moleculesIndex";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles({
-  navlist: {
-    listStyle: "none",
-    display: "flex",
-    flexWrap: "nowrap",
-    textAlign: "right",
-    flex: 1,
-  },
-});
-
 const NavList = () => {
-  const classes = useStyles();
   return (
-    <ul className={classes.navlist}>
+    <ul className="nav-list">
       <AppNavLink text="Home" path="/home" />
       <AppNavLink text="About" path="/about" />
       <AppNavLink text="Contact" path="/contact" />

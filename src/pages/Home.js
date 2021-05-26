@@ -1,11 +1,7 @@
-import { HomeSectionText } from "../organisms/organismIndex";
+import { HomeSection } from "../organisms/organismIndex";
 
 const Home = () => {
-  return (
-    <>
-      <HomeSectionText />
-    </>
-  );
+  return <HomeSection />;
 };
 
 export default Home;

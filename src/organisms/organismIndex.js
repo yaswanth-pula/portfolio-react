@@ -1,4 +1,4 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import HomeSectionText from "./HomeSectionText";
-export { NavBar, Footer, HomeSectionText };
+import HomeSection from "./HomeSection";
+export { NavBar, Footer, HomeSection };
