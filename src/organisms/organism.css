@@ -25,3 +25,21 @@
   padding-top: 0.4%;
   padding-bottom: 0.4%;
 }
+
+/* contact form */
+.contact-form {
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 0.25em solid #333;
+}
+.input-field {
+  margin: 1em;
+  text-align: center;
+}
+.contact-form-header {
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #333;
+}

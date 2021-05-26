@@ -1,7 +1,7 @@
-import React from "react";
+import { ContactForm } from "../organisms/organismIndex";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return <ContactForm />;
 };
 
 export default Contact;

@@ -1,9 +1,8 @@
 import aboutImage from "../assets/about.svg";
+import { AppImage } from "../atoms/atomIndex";
 const AppAboutHeaderImage = () => {
   return (
-    <div>
-      <img src={aboutImage} alt="aboutPoster" className="about-image" />
-    </div>
+    <AppImage source={aboutImage} alt="aboutPoster" classes="about-image" />
   );
 };
 

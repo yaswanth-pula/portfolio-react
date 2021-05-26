@@ -1,10 +1,8 @@
 import devImage from "../assets/dev.svg";
+import { AppImage } from "../atoms/atomIndex";
+
 const AppHomeDevImage = () => {
-  return (
-    <div>
-      <img src={devImage} alt="dev" className="dev-image" />
-    </div>
-  );
+  return <AppImage source={devImage} alt="dev" classes="dev-image" />;
 };
 
 export default AppHomeDevImage;
