@@ -73,3 +73,32 @@
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+/* Gallery Page */
+.gallery-image {
+  width: 25vw;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.admin-image-button {
+  color: #333;
+  padding: 12px;
+  background: #86f0b9;
+  border-radius: 8px;
+  border-color: #86f0b9;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.admin-image-button:hover {
+  background: #e5e5e5;
+  border: 2px solid #86f0b9;
+}
+.admin-btn-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}

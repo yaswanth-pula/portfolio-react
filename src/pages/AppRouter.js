@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { Home, About, Contact, Gallery } from "./PagesIndex";
+import { Home, About, Contact, Gallery, GalleryAdmin } from "./PagesIndex";
 import { NavBar, Footer } from "../organisms/organismIndex";
 const AppRouter = () => {
   return (
@@ -27,6 +27,9 @@ const AppRouter = () => {
           </Route>
           <Route path="/gallery">
             <Gallery />
+          </Route>
+          <Route path="/admin">
+            <GalleryAdmin />
           </Route>
           <Route path="*">
             <Redirect to="/home" />

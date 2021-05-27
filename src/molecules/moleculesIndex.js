@@ -12,6 +12,9 @@ import AboutEducationArticle from "./AboutEducationArticle";
 import AboutProjectsArticle from "./AboutProjectsArticle";
 import AboutAchievimentsArticle from "./AboutAchievimentsArticle";
 import AboutPassTimeArticle from "./AboutPassTimeArticle";
+import AppGalleryImage from "./AppGalleryImage";
+import AppGalleryAdminButton from "./AppGalleryAdminButton";
+import GalleryAdminImage from "./GalleryAdminImage";
 
 export {
   AppNavLink,
@@ -28,4 +31,7 @@ export {
   AboutProjectsArticle,
   AboutAchievimentsArticle,
   AboutPassTimeArticle,
+  AppGalleryImage,
+  AppGalleryAdminButton,
+  GalleryAdminImage,
 };

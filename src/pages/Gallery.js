@@ -1,5 +1,6 @@
+import { GalleryContent } from "../organisms/organismIndex";
 const Gallery = () => {
-  return <div></div>;
+  return <GalleryContent />;
 };
 
 export default Gallery;
