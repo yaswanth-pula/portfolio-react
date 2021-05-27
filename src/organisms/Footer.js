@@ -1,10 +1,10 @@
-import { AppFooterText } from "../molecules/moleculesIndex";
+import { TextTitle } from "../atoms/atomIndex";
 import "./organism.css";
 
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <AppFooterText />
+      <TextTitle classes="footer-text" text="Made with ❤️ by Yaswanth Sai" />
     </footer>
   );
 };

@@ -1,10 +1,10 @@
-import { AppNavHeader } from "../molecules/moleculesIndex";
+import { TextTitle } from "../atoms/atomIndex";
 import NavList from "./NavList";
 
 const NavBar = () => {
   return (
     <nav className="navbar">
-      <AppNavHeader />
+      <TextTitle classes="brand-name" text="Yaswanth Sai" />
       <NavList />
     </nav>
   );

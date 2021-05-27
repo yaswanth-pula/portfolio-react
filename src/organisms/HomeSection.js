@@ -1,21 +1,21 @@
 import Grid from "@material-ui/core/Grid";
-import {
-  AppHomeDevImage,
-  AppHomeResumeButton,
-  AppHomeSubTitleText,
-  AppHomeTitleText,
-} from "../molecules/moleculesIndex";
+import devImage from "../assets/dev.svg";
+import { AppImage, MainHeader, TextTitle } from "../atoms/atomIndex";
+import AppLinkButton from "../molecules/AppLinkButton";
+import resume from "../assets/resume.txt";
 
 const HomeSection = () => {
+  const subTitleText =
+    "On a mission to become a better engineer in the industry.";
   return (
     <Grid container direction="row" justify="space-around" alignItems="center">
       <div>
-        <AppHomeTitleText />
-        <AppHomeSubTitleText />
-        <AppHomeResumeButton />
+        <MainHeader classes="main-title" text="I'm Yaswanth Sai" />
+        <TextTitle classes="main-subtitle" text={subTitleText} />
+        <AppLinkButton href={resume} text="See My Resume" download={true} />
       </div>
       <div>
-        <AppHomeDevImage />
+        <AppImage source={devImage} alt="dev" classes="dev-image" />
       </div>
     </Grid>
   );
