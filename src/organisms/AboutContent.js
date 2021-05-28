@@ -1,6 +1,18 @@
 import Container from "@material-ui/core/Container";
 import { AppAboutArticle } from "../molecules/moleculesIndex";
 import { MainHeader, TextTitle } from "../atoms/atomIndex";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  articleHeader: {
+    fontSize: "2.25rem",
+    fontWeight: "600",
+  },
+  articleSubtext: {
+    fontSize: "1.5rem",
+    fontWeight: "400",
+  },
+});
 
 const AboutContent = () => {
   const edTextContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -27,47 +39,52 @@ const AboutContent = () => {
   const achieviment3 = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
   molestiae, dolore totam temporibus nihil numquam.`;
 
+  const styles = useStyles();
+
   return (
     <Container>
       <AppAboutArticle
         children={
           <>
-            <MainHeader text="Education 📚" classes="article-header" />
-            <TextTitle text={edTextContent} classes="article-subtext" />
+            <MainHeader text="Education 📚" classes={styles.articleHeader} />
+            <TextTitle text={edTextContent} classes={styles.articleSubtext} />
           </>
         }
       />
       <AppAboutArticle
         children={
           <>
-            <MainHeader text="Projects 🖥️" classes="article-header" />
+            <MainHeader text="Projects 🖥️" classes={styles.articleHeader} />
             <h2>Lorem, ipsum dolor.</h2>
-            <TextTitle text={projectText1} classes="article-subtext" />
+            <TextTitle text={projectText1} classes={styles.articleSubtext} />
             <h2>Lorem, ipsum.</h2>
-            <TextTitle text={projectText2} classes="article-subtext" />
+            <TextTitle text={projectText2} classes={styles.articleSubtext} />
           </>
         }
       />
       <AppAboutArticle
         children={
           <>
-            <MainHeader text="Achieviments 🥇" classes="article-header" />
-            <TextTitle text={achieviment1} classes="article-subtext" />
-            <TextTitle text={achieviment2} classes="article-subtext" />
-            <TextTitle text={achieviment3} classes="article-subtext" />
+            <MainHeader text="Achieviments 🥇" classes={styles.articleHeader} />
+            <TextTitle text={achieviment1} classes={styles.articleSubtext} />
+            <TextTitle text={achieviment2} classes={styles.articleSubtext} />
+            <TextTitle text={achieviment3} classes={styles.articleSubtext} />
           </>
         }
       />
       <AppAboutArticle
         children={
           <>
-            <MainHeader text="Pass Time ⌛" classes="article-header" />
+            <MainHeader text="Pass Time ⌛" classes={styles.articleHeader} />
             <TextTitle
               text="Hangout with Friends 🧑‍🤝‍🧑"
-              classes="article-subtext"
+              classes={styles.articleSubtext}
             />
-            <TextTitle text="Watching Movies 📺" classes="article-subtext" />
-            <TextTitle text="Cooking 🍳" classes="article-subtext" />
+            <TextTitle
+              text="Watching Movies 📺"
+              classes={styles.articleSubtext}
+            />
+            <TextTitle text="Cooking 🍳" classes={styles.articleSubtext} />
           </>
         }
       />

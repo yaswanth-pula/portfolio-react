@@ -1,6 +1,6 @@
 const AppImage = (props) => {
-  const { source, alt, classes } = props;
-  return <img src={source} alt={alt} className={classes} />;
+  const { src, alt, classes } = props;
+  return <img src={src} alt={alt} className={classes} />;
 };
 
 export default AppImage;

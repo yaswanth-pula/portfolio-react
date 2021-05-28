@@ -7,11 +7,22 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import InputTextField from "../atoms/InputTextField";
 import { addNewImageToStore } from "../store/localStore";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  adminButtonContainer: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    marginBottom: "1em",
+  },
+});
 
 const AdminAddImage = (props) => {
   const [imageUrl, setImageUrl] = useState("");
   const [toggleDialog, setToggleDialog] = useState(false);
   const { informParent } = props;
+  const styles = useStyles();
 
   const handleDialogOpen = () => {
     setToggleDialog(true);
@@ -35,7 +46,7 @@ const AdminAddImage = (props) => {
 
   return (
     <>
-      <div className="admin-btn-container">
+      <div className={styles.adminButtonContainer}>
         <AppLinkButton handler={handleDialogOpen} text="Add New Image" />
       </div>
       <Dialog

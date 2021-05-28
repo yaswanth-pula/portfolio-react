@@ -1,12 +1,5 @@
-import { makeStyles } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
-const useStyles = makeStyles({
-  margin: {
-    marginBottom: "1em",
-  },
-});
 const InputTextField = (props) => {
-  const classes = useStyles();
   const {
     label,
     placeholder,
@@ -14,11 +7,11 @@ const InputTextField = (props) => {
     rows,
     changeHandler,
     value,
-    // classes,
+    classes,
   } = props;
   return (
     <TextField
-      className={classes.margin}
+      className={classes}
       id="outlined-basic"
       label={label}
       variant="outlined"
