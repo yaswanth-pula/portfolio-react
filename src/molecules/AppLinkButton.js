@@ -1,4 +1,5 @@
-import { Button, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import AppButton from "../atoms/AppButton";
 
 const useStyles = makeStyles({
   root: {
@@ -13,16 +14,16 @@ const useStyles = makeStyles({
 });
 const AppLinkButton = (props) => {
   const classes = useStyles();
-  const { href, text, download } = props;
+  const { href, text, download, target, handler } = props;
   return (
-    <Button
-      variant="contained"
+    <AppButton
+      text={text}
       href={href}
-      className={classes.root}
+      classes={classes.root}
       download={download}
-    >
-      {text}
-    </Button>
+      target={target}
+      handler={handler}
+    />
   );
 };
 

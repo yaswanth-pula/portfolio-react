@@ -1,9 +1,14 @@
 import { AppGalleryImage, AppLinkButton } from "../molecules/moleculesIndex";
-import foodimg1 from "../assets/food_img1.jpg";
-import foodimg2 from "../assets/food_img2.jpg";
-import foodimg3 from "../assets/food_img3.jpg";
+import { useEffect, useState } from "react";
+import { getAllImagesFromStore } from "../store/localStore";
 
 const GalleryContent = () => {
+  const [imageList, setImageList] = useState([]);
+
+  useEffect(() => {
+    setImageList(getAllImagesFromStore());
+  }, []);
+
   return (
     <>
       <div className="admin-btn-container">
@@ -11,10 +16,13 @@ const GalleryContent = () => {
       </div>
       <div className="gallery-container">
         <div className="gallery-image-container">
-          <AppGalleryImage source={foodimg1} />
-          <AppGalleryImage source={foodimg2} />
-          <AppGalleryImage source={foodimg3} />
+          {imageList.map((img) => {
+            return <AppGalleryImage source={img.url} key={img.id} />;
+          })}
         </div>
+      </div>
+      <div>
+        <h1>.</h1>
       </div>
     </>
   );

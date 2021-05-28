@@ -1,6 +1,6 @@
-import { Button, Container } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { TextTitle, InputTextField } from "../atoms/atomIndex";
-
+import { AppLinkButton } from "../molecules/moleculesIndex";
 const ContactForm = () => {
   return (
     <Container maxWidth="sm">
@@ -21,9 +21,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="input-field">
-          <Button variant="contained" color="primary" size="large">
-            Send Message
-          </Button>
+          <AppLinkButton text="Send Message" />
         </div>
       </div>
     </Container>

@@ -1,17 +1,40 @@
 import { GalleryAdminImage } from "../molecules/moleculesIndex";
-import foodimg1 from "../assets/food_img1.jpg";
-import foodimg2 from "../assets/food_img2.jpg";
-import foodimg3 from "../assets/food_img3.jpg";
+import { useEffect, useState } from "react";
+import { getAllImagesFromStore } from "../store/localStore";
+import AdminAddImage from "./AdminAddImage";
 
 const GalleryAdminContent = () => {
+  const [imageList, setImageList] = useState([]);
+  const [childUpdate, setChildUpdate] = useState("");
+
+  useEffect(() => {
+    setImageList(getAllImagesFromStore());
+  }, [childUpdate]);
+
+  const handleChildUpdate = () => {
+    setChildUpdate(Date.now());
+  };
+
   return (
-    <div className="gallery-container">
-      <div className="gallery-image-container">
-        <GalleryAdminImage source={foodimg1} />
-        <GalleryAdminImage source={foodimg2} />
-        <GalleryAdminImage source={foodimg3} />
+    <>
+      <AdminAddImage informParent={handleChildUpdate} />
+      <div className="gallery-container">
+        <div className="gallery-image-container">
+          {imageList.map((img) => {
+            return (
+              <GalleryAdminImage
+                image={img}
+                key={img.id}
+                informParent={handleChildUpdate}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+      <div>
+        <h1>.</h1>
+      </div>
+    </>
   );
 };
 
