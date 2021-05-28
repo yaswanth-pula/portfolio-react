@@ -47,8 +47,8 @@ const useStyles = makeStyles({
   },
 });
 
-const GalleryAdminImage = (props) => {
-  const { image, informParent } = props;
+const GalleryImageItem = (props) => {
+  const { image, informParent, isAdmin } = props;
   const styles = useStyles();
   const handleDeleteClick = () => {
     let decison = window.confirm("Are You Sure to Delete Image ?");
@@ -61,15 +61,19 @@ const GalleryAdminImage = (props) => {
   return (
     <div className={styles.pictureContainer}>
       <AppGalleryImage src={image.url} />
-      <div className={styles.overlay}></div>
-      <div className={`${styles.optionButton} ${styles.viewPosition}`}>
-        <AppLinkButton text="view" href={image.url} target="_blank" />
-      </div>
-      <div className={`${styles.optionButton} ${styles.deletePosition}`}>
-        <AppLinkButton handler={handleDeleteClick} text="Delete" />
-      </div>
+      {isAdmin && (
+        <>
+          <div className={styles.overlay}></div>
+          <div className={`${styles.optionButton} ${styles.viewPosition}`}>
+            <AppLinkButton text="view" href={image.url} target="_blank" />
+          </div>
+          <div className={`${styles.optionButton} ${styles.deletePosition}`}>
+            <AppLinkButton handler={handleDeleteClick} text="Delete" />
+          </div>
+        </>
+      )}
     </div>
   );
 };
 
-export default GalleryAdminImage;
+export default GalleryImageItem;

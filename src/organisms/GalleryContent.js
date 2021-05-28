@@ -1,7 +1,8 @@
-import { AppGalleryImage, AppLinkButton } from "../molecules/moleculesIndex";
+import { AppLinkButton } from "../molecules/moleculesIndex";
 import { useEffect, useState } from "react";
 import { getAllImagesFromStore } from "../store/localStore";
 import { makeStyles } from "@material-ui/core/styles";
+import GalleryImageItem from "./GalleryImageItem";
 
 const useStyles = makeStyles({
   galleryContainer: {
@@ -39,7 +40,9 @@ const GalleryContent = () => {
       <div className={styles.galleryContainer}>
         <div className={styles.galleryImageContainer}>
           {imageList.map((img) => {
-            return <AppGalleryImage src={img.url} key={img.id} />;
+            return (
+              <GalleryImageItem image={img} key={img.id} isAdmin={false} />
+            );
           })}
         </div>
       </div>

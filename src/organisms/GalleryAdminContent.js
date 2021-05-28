@@ -1,4 +1,4 @@
-import GalleryAdminImage from "./GalleryAdminImage";
+import GalleryImageItem from "./GalleryImageItem";
 import { useEffect, useState } from "react";
 import { getAllImagesFromStore } from "../store/localStore";
 import AdminAddImage from "./AdminAddImage";
@@ -39,10 +39,11 @@ const GalleryAdminContent = () => {
         <div className={styles.galleryImageContainer}>
           {imageList.map((img) => {
             return (
-              <GalleryAdminImage
+              <GalleryImageItem
                 image={img}
                 key={img.id}
                 informParent={handleChildUpdate}
+                isAdmin={true}
               />
             );
           })}
