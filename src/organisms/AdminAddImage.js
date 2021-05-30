@@ -20,6 +20,8 @@ const useStyles = makeStyles({
 
 const AdminAddImage = (props) => {
   const [imageUrl, setImageUrl] = useState("");
+  const [fieldError, setFieldError] = useState(false);
+
   const [toggleDialog, setToggleDialog] = useState(false);
   const { informParent } = props;
   const styles = useStyles();
@@ -37,7 +39,16 @@ const AdminAddImage = (props) => {
     setImageUrl(event.target.value);
   };
 
+  const isNotValid = () => {
+    return imageUrl.trim() === "";
+  };
+
   const handleAddNewImage = () => {
+    if (isNotValid()) {
+      setFieldError(true);
+      return;
+    }
+    setFieldError(false);
     addNewImageToStore(imageUrl);
     setImageUrl("");
     informParent();
@@ -64,6 +75,8 @@ const AdminAddImage = (props) => {
             placeholder="Enter Image Url.."
             value={imageUrl}
             changeHandler={handleUrlChange}
+            isError={fieldError}
+            errorText="Url Cannot Be Empty"
           />
         </DialogContent>
         <DialogActions>

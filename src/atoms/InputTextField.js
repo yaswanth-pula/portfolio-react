@@ -8,11 +8,14 @@ const InputTextField = (props) => {
     changeHandler,
     value,
     classes,
+    isError,
+    errorText,
+    id,
   } = props;
   return (
     <TextField
       className={classes}
-      id="outlined-basic"
+      id={id}
       label={label}
       variant="outlined"
       placeholder={placeholder}
@@ -22,6 +25,8 @@ const InputTextField = (props) => {
       rows={rows}
       onChange={changeHandler ? (event) => changeHandler(event) : null}
       value={value}
+      error={isError}
+      helperText={isError ? errorText : ""}
     />
   );
 };
